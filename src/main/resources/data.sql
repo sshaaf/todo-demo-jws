@@ -1,10 +1,11 @@
 CREATE TABLE IF NOT EXISTS todos (
-                                     id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                                     id BIGSERIAL PRIMARY KEY,
                                      title VARCHAR(255) NOT NULL UNIQUE,
     completed BOOLEAN NOT NULL,
     ordering INT NOT NULL,
     url VARCHAR(255)
     );
+
 INSERT INTO todos (title, completed, ordering, url) VALUES
                                                         ('Todo 1', false, 1, 'http://example.com/todo1'),
                                                         ('Todo 2', true, 2, 'http://example.com/todo2'),
