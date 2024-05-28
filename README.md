@@ -32,6 +32,36 @@ Its also possible to run the container image locally. The image expects a locall
 podman run -p 8080:8080 quay.io/sshaaf/todo-demo-jws:latest 
 ```
 
+### Building the image and pushing it to a repo
+First we need to build and package the source files
+
+```maven
+mvn clean compile package
+```
+The command is composed of three separate phases of the Maven build lifecycle: clean, compile, and package. As the goals state once the command completes it should copy the WAR file into the target directory. Ready to be deployed into JBoss Web Server (JWS)
+
+The JWS Operator can use a pre-built image or it can derive one from source code. In this example we create an image and push it to quay.io
+
+First a little about the Dockerfile
+```dockerfile
+FROM registry.redhat.io/jboss-webserver-6/jws60-openjdk17-openshift-rhel8:6.0.2-2
+
+COPY target/todo-demo-jws-0.0.1-SNAPSHOT.war /deployments/ROOT.war
+```
+- We use the JBoss Web Server 6 image. The images uses OpenJDK version 17
+- We also copy our war file to the root. so it resolves on `/`
+
+Run the following command to build the image. 
+```bash
+podman build --arch=x86_64 -t YOUR_REPO_NAME:latest .
+```
+**podman build:** This is the primary command to build a container image using Podman. It is similar to docker build in Docker.
+
+**--arch=x86_64:** This specifies the architecture for the container image. x86_64 indicates that the image should be built for the 64-bit x86 architecture. This is useful when you are building images for different architectures and need to specify the target architecture explicitly. This is useful e.g. if you are running the build on Apple Silicon like the M series.
+
+**-t quay.io/sshaaf/todo-demo-jws:latest:** e.g. `-t` for the tag and rest is the repo name/image
+
+Once built push the image to a repository accessible by the OpenShift cluster. [Quay.io](https://quay.io) or the DockerHub are both accessible by an OpenShift cluster as they are publicly hosted. 
 
 ## Running the app on OpenShift using Operator
 First things first we need to deploy a database before we deploy the application
