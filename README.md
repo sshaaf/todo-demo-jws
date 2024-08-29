@@ -29,7 +29,7 @@ mvn spring-boot:run
 
 Its also possible to run the container image locally. The image expects a locally running postgresql with a hostname `todos-database`.
 ```bash
-podman run -p 8080:8080 quay.io/sshaaf/todo-demo-jws:latest 
+podman run -p 8080:8080 quay.io/${USER}/todo-demo-jws:latest 
 ```
 
 ### Building the image and pushing it to a repo
