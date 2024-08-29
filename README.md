@@ -53,15 +53,15 @@ COPY target/todo-demo-jws-0.0.1-SNAPSHOT.war /deployments/ROOT.war
 
 Run the following command to build the image. 
 ```bash
-podman build --arch=x86_64 -t YOUR_REPO_NAME:latest .
+podman build --arch=x86_64 -t quay.io/${USER}/todo-demo-jws:latest .
 ```
 **podman build:** This is the primary command to build a container image using Podman. It is similar to docker build in Docker.
 
 **--arch=x86_64:** This specifies the architecture for the container image. x86_64 indicates that the image should be built for the 64-bit x86 architecture. This is useful when you are building images for different architectures and need to specify the target architecture explicitly. This is useful e.g. if you are running the build on Apple Silicon like the M series.
 
-**-t quay.io/sshaaf/todo-demo-jws:latest:** e.g. `-t` for the tag and rest is the repo name/image
+**-t quay.io/${USER}/todo-demo-jws:latest:** e.g. `-t` for the tag and rest is the repo name/image
 
-Once built push the image to a repository accessible by the OpenShift cluster. [Quay.io](https://quay.io) or the DockerHub are both accessible by an OpenShift cluster as they are publicly hosted. 
+Once built push the image to a repository accessible by the OpenShift cluster. [Quay.io](https://quay.io) or the DockerHub are both accessible by an OpenShift cluster as they are publicly hosted and your images are public. 
 
 ## Running the app on OpenShift using Operator
 First things first we need to deploy a database before we deploy the application
