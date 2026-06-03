@@ -1,0 +1,44 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# IDE
+.idea
+.vscode
+.settings
+.project
+.classpath
+*.iml
+
+# Build artifacts
+target/
+build/
+dist/
+*.log
+
+# Documentation
+*.md
+docs/
+
+# Test files
+src/test/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+Jenkinsfile
+
+# Migration artifacts (not needed in container)
+graphify-out/
+mig-*-workspace/
+migiq-workspace/
+.claude/
+
+# Environment files (secrets should come from OpenShift)
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
