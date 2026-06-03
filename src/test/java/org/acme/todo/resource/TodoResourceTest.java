@@ -1,7 +1,6 @@
 package org.acme.todo.resource;
 
 import io.quarkus.test.junit.QuarkusTest;
-import io.quarkus.test.junit.TestTransaction;
 import org.acme.todo.model.Todo;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +21,6 @@ class TodoResourceTest {
     }
     
     @Test
-    @TestTransaction
     void testCreateTodo() {
         given()
             .contentType("application/json")
@@ -44,7 +42,6 @@ class TodoResourceTest {
     }
     
     @Test
-    @TestTransaction
     void testDeleteTodo() {
         // Create a todo first
         Integer id = given()
