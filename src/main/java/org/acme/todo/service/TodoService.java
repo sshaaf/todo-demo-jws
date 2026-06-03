@@ -2,31 +2,33 @@ package org.acme.todo.service;
 
 import org.acme.todo.model.Todo;
 import org.acme.todo.repository.TodoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-
-@Service
+@ApplicationScoped
 public class TodoService {
-
-    @Autowired
-    private TodoRepository todoRepository;
-
+    
+    @Inject
+    TodoRepository todoRepository;
+    
     public List<Todo> getAllTodos() {
-        return todoRepository.findAll();
+        return todoRepository.listAll();
     }
-
+    
     public Optional<Todo> getTodoById(Long id) {
-        return todoRepository.findById(id);
+        return todoRepository.findByIdOptional(id);
     }
-
+    
+    @Transactional
     public Todo createOrUpdateTodo(Todo todo) {
-        return todoRepository.save(todo);
+        todoRepository.persist(todo);
+        return todo;
     }
-
+    
+    @Transactional
     public void deleteTodoById(Long id) {
         todoRepository.deleteById(id);
     }

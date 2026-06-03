@@ -1,0 +1,70 @@
+{
+  "/Users/sshaaf/git/demos/todo-demo-jws/mvnw": {
+    "mtime": 1780477693.9980848,
+    "hash": "1cb91324f5d0650f786f31379d2f097f"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/test/java/org/acme/todo/TodoDemoJwsApplicationTests.java": {
+    "mtime": 1780477694.002017,
+    "hash": "5d02ecfd6367c1ee77ed81300a13fda8"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/resources/data.sql": {
+    "mtime": 1780477694.0000527,
+    "hash": "5207b29bd1164fafd7a0a2ff5ea18c6e"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/resources/static/main-FHS2MJ4J.js": {
+    "mtime": 1780477694.0010905,
+    "hash": "7ba2e0226d8b4ab91f58b5289aed2420"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/resources/static/polyfills-LZBJRJJE.js": {
+    "mtime": 1780477694.001312,
+    "hash": "c45ad4153f1515c2edd0eee47d846d19"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/java/org/acme/todo/ServletInitializer.java": {
+    "mtime": 1780477693.9988961,
+    "hash": "924a75545e68ffbc6d1fcc2b58aff774"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/java/org/acme/todo/TodoDemoJwsApplication.java": {
+    "mtime": 1780477693.9990141,
+    "hash": "5141e141309fc5ae23e31040d9377c33"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/java/org/acme/todo/repository/TodoRepository.java": {
+    "mtime": 1780477693.9995472,
+    "hash": "ccc7d7b28e27db91e026560dcf6bb842"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/java/org/acme/todo/controller/TodoController.java": {
+    "mtime": 1780477693.9992015,
+    "hash": "e1b36a01def787572e854242931ce501"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/java/org/acme/todo/model/Todo.java": {
+    "mtime": 1780477693.9993718,
+    "hash": "5a1a72f9641506098582e8df067a08e2"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/java/org/acme/todo/service/TodoService.java": {
+    "mtime": 1780477693.999713,
+    "hash": "3d1b562b8af35974dd16c9c0b9c757c1"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/README.md": {
+    "mtime": 1780477693.9966874,
+    "hash": "a26d156d7a88d24a883b6c6754245657"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/migiq-workspace/orchestration-log.md": {
+    "mtime": 1780477896.2341197,
+    "hash": "dc64d8fde3178b15be8c179adec46977"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/src/main/resources/static/index.html": {
+    "mtime": 1780477694.0004041,
+    "hash": "6d5314652bb7df70aaf00a2a2fb337fe"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/images/jws-operator.jpeg": {
+    "mtime": 1780477693.9973319,
+    "hash": "a11c8a13359ed7aa481ba404ae077f14"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/images/todo-demo-app-spring3-jws-tomcat.jpeg": {
+    "mtime": 1780477693.9976947,
+    "hash": "dea7d9ac8d04322eb2d58df30d7c5562"
+  },
+  "/Users/sshaaf/git/demos/todo-demo-jws/images/todo-mvc-angular.jpeg": {
+    "mtime": 1780477693.9978943,
+    "hash": "1287e3f53ad22011371f293078d60718"
+  }
+}

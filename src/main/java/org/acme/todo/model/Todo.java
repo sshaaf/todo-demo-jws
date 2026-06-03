@@ -1,67 +1,25 @@
 package org.acme.todo.model;
 
-import jakarta.persistence.*;
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "todos")
-public class Todo {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+public class Todo extends PanacheEntity {
+    // id field inherited from PanacheEntity
+    
     @NotBlank
     @Column(unique = true)
-    private String title;
-
-    private boolean completed;
-
+    public String title;
+    
+    public boolean completed;
+    
     @Column(name = "ordering")
-    private int order;
-
+    public int order;
+    
     @Column(name = "url")
-    private String url;
-
-    // Getters and Setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public boolean isCompleted() {
-        return completed;
-    }
-
-    public void setCompleted(boolean completed) {
-        this.completed = completed;
-    }
-
-    public int getOrder() {
-        return order;
-    }
-
-    public void setOrder(int order) {
-        this.order = order;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
+    public String url;
 }
